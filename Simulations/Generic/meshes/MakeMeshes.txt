@@ -1,0 +1,19 @@
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.0e6 -setnumber H_aq  5 -setnumber prog_r_top 1.02 -setnumber ly_aq_medium 0.1 -o gmsh_H05m_cap40m_Mi1e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.0e6 -setnumber H_aq 10 -setnumber prog_r_top 1.03 -setnumber ly_aq_medium 0.15 -o gmsh_H10m_cap40m_Mi1e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.0e6 -setnumber H_aq 20 -setnumber prog_r_top 1.04 -setnumber ly_aq_medium 0.2 -o gmsh_H20m_cap40m_Mi1e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.0e6 -setnumber H_aq 40 -setnumber prog_r_top 1.05 -setnumber ly_aq_medium 0.25 -o gmsh_H40m_cap40m_Mi1e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.0e6 -setnumber H_aq 60 -setnumber prog_r_top 1.07 -setnumber ly_aq_medium 0.3 -o gmsh_H60m_cap40m_Mi1e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.3e6 -setnumber H_aq  5 -setnumber prog_r_top 1.02 -setnumber ly_aq_medium 0.1 -o gmsh_H05m_cap40m_Mi1.3e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.3e6 -setnumber H_aq 10 -setnumber prog_r_top 1.03 -setnumber ly_aq_medium 0.15 -o gmsh_H10m_cap40m_Mi1.3e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.3e6 -setnumber H_aq 20 -setnumber prog_r_top 1.04 -setnumber ly_aq_medium 0.2 -o gmsh_H20m_cap40m_Mi1.3e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.3e6 -setnumber H_aq 40 -setnumber prog_r_top 1.05 -setnumber ly_aq_medium 0.25 -o gmsh_H40m_cap40m_Mi1.3e6.msh
+wait
+gmsh gmsh_a60m_c40m_003.geo -2 -setnumber M_i 1.3e6 -setnumber H_aq 60 -setnumber prog_r_top 1.07 -setnumber ly_aq_medium 0.3 -o gmsh_H60m_cap40m_Mi1.3e6.msh

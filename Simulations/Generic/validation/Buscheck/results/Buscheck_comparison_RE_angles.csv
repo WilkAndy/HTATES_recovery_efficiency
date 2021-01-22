@@ -1,0 +1,6 @@
+﻿,,,,,,Buscheck,,,MOOSE,,
+Name,T_i,perm_x_aq,perm_y_aq,perm_x_cap,perm_y_cap,Angle End injection,Angle End storage,R,Angle End injection,Angle End storage,R
+AT90F,90,1.5E-11,1.5E-12,1.5E-16,1.5E-17,40.30,65.50,0.58,44.54,67.18,0.56
+AT55F,55,1.5E-11,1.5E-12,1.5E-16,1.5E-17,13.90,23.00,0.68,16.30,31.00,0.66
+BT90F,90,5.2E-11,5.2E-12,5.2E-16,5.2E-17,68.00,80.90,0.34,69.50,84.81,0.31
+BT55F,55,5.2E-11,5.2E-12,5.2E-16,5.2E-17,39.20,64.90,0.57,46.02,68.10,0.53
