@@ -23,6 +23,10 @@ During the course of this study, it was found that the water properties (chiefly
 - `Simulations/Generic/waterBuscheck_tabulated.csv` are properties using Buscheck's approximation
 - `Simulations/Generic/waterSchout_tabulated_thermExp2E-4.csv` are properties using Schout's approximation
 
+## Validation
+
+Validation of the models against the Auburn data, Schout's results and Buscheck's results are performed by models in `Simulations/Generic/validation`
+
 ## Results
 
 Results are in in `Simulations/Generic/REpaper/results`.
@@ -31,6 +35,13 @@ Results are in in `Simulations/Generic/REpaper/results`.
 - `Simulations/Generic/REpaper/results/RE/all_RE.csv` holds a summary of all results
 - `Simulations/Generic/REpaper/results/csv/` is a directory that holds all the raw MOOSE output, organised by cycle length, depth and dispersion
 
+## Correlations
+
+Correlations of the results with empirical formulae using the modified Rayleigh number (ala Schout) and a generalised linear model may be performed with the scripts in `Simulations/utilities/python_scripts`.
+
+The architecture, training and testing of the simple convolutional neural network is defined through the python script `Simulations/utilities/python_scripts/plot_nn1.py`.
+
+The results of these are found in `recovery_efficiency/figures`.
 
 
 
