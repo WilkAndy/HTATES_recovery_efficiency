@@ -139,8 +139,8 @@ num_r_fine = ${fparse int(fine_r/1)}
 ######################################
 # aquifer properties
 aq_porosity = 0.25
-aq_hor_perm = 1E-13 # m^2
-aq_ver_perm = 1E-14 # m^2
+aq_hor_perm = 1E-11 # m^2
+aq_ver_perm = 1E-12 # m^2
 aq_density = 2650 # kg/m^3
 aq_specific_heat_cap = 800 # J/Kg/K
 aq_hor_thermal_cond = 3 # W/m/K

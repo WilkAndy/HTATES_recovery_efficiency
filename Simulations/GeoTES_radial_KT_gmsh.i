@@ -120,8 +120,8 @@ fine_r_top = ${fparse 5 + aq_thickness/2}
 #####################################
 # aquifer properties
 aq_porosity = 0.25
-aq_hor_perm = 1E-13 # m^2
-aq_ver_perm = 1E-14 # m^2
+aq_hor_perm = 1E-11 # m^2
+aq_ver_perm = 1E-12 # m^2
 aq_density = 2650 # kg/m^3
 aq_specific_heat_cap = 800 # J/Kg/K
 aq_hor_thermal_cond = 3 # W/m/K
@@ -158,51 +158,51 @@ cap_ver_wet_thermal_cond = ${fparse cap_ver_thermal_cond * 60 * 60 * 24} # J/day
     type = FileMeshGenerator
     file = ${mesh_file}
   []
-  [./create_aquifer]
+  [create_aquifer]
     type = ParsedSubdomainMeshGenerator
     combinatorial_geometry = 'y >= -${half_aq_thickness} & y <= ${half_aq_thickness}'
     block_id = 100
     block_name = aquifer
     input = mesh
-  [../]
-  [./create_top_cap]
+  []
+  [create_top_cap]
     type = ParsedSubdomainMeshGenerator
     combinatorial_geometry = 'y >= ${half_aq_thickness}'
     block_id = 200
     block_name = cap_top
     input = create_aquifer
-  [../]
-  [./create_bottom_cap]
+  []
+  [create_bottom_cap]
     type = ParsedSubdomainMeshGenerator
     combinatorial_geometry = 'y <= -${half_aq_thickness}'
     block_id = 300
     block_name = cap_bottom
     input = create_top_cap
-  [../]
-  [./create_fine_aquifer]
+  []
+  [create_fine_aquifer]
     type = ParsedSubdomainMeshGenerator
     combinatorial_geometry = 'x <= ${fine_r}'
     excluded_subdomain_ids = '200 300'
     block_id = 101
     block_name = fine_aquifer
     input = create_bottom_cap
-  [../]
-  [./create_fine_cap_top]
+  []
+  [create_fine_cap_top]
     type = ParsedSubdomainMeshGenerator
     combinatorial_geometry = 'x <= ${fine_r} & y <= ${fine_r_top}'
     excluded_subdomain_ids = '100 101 300'
     block_id = 201
     block_name = fine_cap_top
     input = create_fine_aquifer
-  [../]
-  [./create_fine_cap_bottom]
+  []
+  [create_fine_cap_bottom]
     type = ParsedSubdomainMeshGenerator
     combinatorial_geometry = 'x <= ${fine_r} & y >= -${fine_r_top}'
     excluded_subdomain_ids = '100 101 200 201'
     block_id = 301
     block_name = fine_cap_bottom
     input = create_fine_cap_top
-  [../]
+  []
   
   [injection_area]
     type = ParsedGenerateSideset
@@ -538,7 +538,7 @@ cap_ver_wet_thermal_cond = ${fparse cap_ver_thermal_cond * 60 * 60 * 24} # J/day
     porosity_zero = ${aq_porosity}
     fluid = true
     biot_coefficient = 0.6
-    solid_bulk = 10E9
+    solid_bulk = 1E10
     block = 'aquifer aquifer_fine'
   []
   [porosity_caps]
@@ -546,7 +546,7 @@ cap_ver_wet_thermal_cond = ${fparse cap_ver_thermal_cond * 60 * 60 * 24} # J/day
     porosity_zero = ${cap_porosity}
     fluid = true
     biot_coefficient = 0.6
-    solid_bulk = 10E9
+    solid_bulk = 1E10
     block = 'caps caps_fine'
   []
   
